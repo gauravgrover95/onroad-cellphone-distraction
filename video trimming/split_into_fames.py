@@ -10,10 +10,12 @@ end = 500
 
 
 # Conf variables
-video_name = '03_14_2019_04'
+video_name = '06_21_2019_02'
+
+
 video_file = video_name + '.mp4'
 currentFrame = 0
-output_folder = 'data/' + video_name
+output_folder = 'staging_area/' + video_name
 cap = cv2.VideoCapture(video_file)
 fps = cap.get(cv2.CAP_PROP_FPS)
 totalFrames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -27,7 +29,7 @@ except OSError:
 
 print("Please Wait...")
 while(success):
-    name = './' + output_folder + '/frame_' + video_name + '_' + str('%06d' % currentFrame) + '.jpg'
+    name = './' + output_folder + '/' + str('%06d' % currentFrame) + '.jpg'
     
     if debugging:
         if currentFrame >= start and currentFrame <= end and currentFrame % fps == 0:
