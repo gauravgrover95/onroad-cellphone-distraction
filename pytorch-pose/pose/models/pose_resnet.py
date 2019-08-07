@@ -6,7 +6,8 @@ from easydict import EasyDict as edict
 
 import torch
 import torch.nn as nn
-from torchvision.models.resnet import model_zoo
+# from torchvision.models.resnet import model_zoo
+import model_zoo
 from torchvision.models.resnet import model_urls
 from torchvision.models.resnet import BasicBlock, Bottleneck
 
